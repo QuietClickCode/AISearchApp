@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import okhttp3.OkHttpClient;
@@ -14,11 +15,14 @@ import okhttp3.Response;
 
 public class FirstActivity extends AppCompatActivity {
 
+    TextView responseText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
         Button button1 = findViewById(R.id.button_1);
+        responseText = findViewById(R.id.response_text);
         /*button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +58,7 @@ public class FirstActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                System.out.println(response);
+                responseText.setText(response);
             }
         });
     }
