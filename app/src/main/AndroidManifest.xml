@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".FirstActivity"
-            android:label="This is FirstActivity">
+            android:label="AISearch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
