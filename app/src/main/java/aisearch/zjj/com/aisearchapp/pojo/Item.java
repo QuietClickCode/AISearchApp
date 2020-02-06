@@ -7,6 +7,13 @@ package aisearch.zjj.com.aisearchapp.pojo;
 public class Item {
     private String id;
     private String title;
+    private String content;
+
+    public Item(String id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
 
     public String getId() {
         return id;
@@ -24,8 +31,11 @@ public class Item {
         this.title = title;
     }
 
-    public Item(String id, String title) {
-        this.id = id;
-        this.title = title;
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

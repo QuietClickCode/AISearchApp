@@ -33,8 +33,10 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
         TextView textView = view.findViewById(R.id.textViewId);
         TextView textView1 = view.findViewById(R.id.textViewTitle);
+        TextView textView2 = view.findViewById(R.id.textViewContent);
         textView.setText(item.getId());
         textView1.setText(item.getTitle());
+        textView2.setText(item.getContent());
         return  view;
     }
 }

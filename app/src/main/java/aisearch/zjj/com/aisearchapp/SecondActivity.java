@@ -98,7 +98,8 @@ public class SecondActivity extends AppCompatActivity {
                                     jsonObject1 = (JSONObject) JSONObject.parse(s);
                                     String title = (String) jsonObject1.get("title");
                                     String id = (String) jsonObject1.get("id");
-                                    Item item = new Item(id, title);
+                                    String content = (String) jsonObject1.get("content");
+                                    Item item = new Item(id, title, content);
                                     itemList.add(item);
                                     arrayListTitle.add(title);
                                     arrayListId.add(id);
@@ -154,8 +155,6 @@ public class SecondActivity extends AppCompatActivity {
                         jsonObject1 = (JSONObject) JSONObject.parse(s);
                         String title = (String) jsonObject1.get("title");
                         String id = (String) jsonObject1.get("id");
-                        Item item = new Item(id, title);
-                        itemList.add(item);
                         arrayListTitle.add(title);
                         arrayListId.add(id);
                     }
