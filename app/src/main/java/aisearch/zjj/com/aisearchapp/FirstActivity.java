@@ -7,19 +7,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
-    TextView responseText;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
         Button button1 = findViewById(R.id.button_1);
-        responseText = findViewById(R.id.response_text);
+        editText = findViewById(R.id.aisearch_edittext);
         /*button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,9 +29,12 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-             Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-             startActivity(intent);
+                Bundle bundle = new Bundle();
+                String text = editText.getText().toString();
+                bundle.putString("keyword", text);
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                intent.putExtra("data", bundle);
+                startActivity(intent);
             }
         });
     }
