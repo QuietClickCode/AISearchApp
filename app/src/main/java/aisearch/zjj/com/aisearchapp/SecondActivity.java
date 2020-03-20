@@ -64,7 +64,7 @@ public class SecondActivity extends AppCompatActivity {
                 try {
                     OkHttpClient client = new OkHttpClient();
                     /*Request request = new Request.Builder().url("https://www.myznsh.com/searchcsdn?wd=%E7%88%B1%E6%83%85").build();*/
-                    Request request = new Request.Builder().url("https://www.myznsh.com/searchcsdn?wd=" + keyword).build();
+                    Request request = new Request.Builder().url("http://www.myznsh.com/searchcsdn?wd=" + keyword).build();
                     Call call = client.newCall(request);
                     call.enqueue(new Callback() {
                         @Override
